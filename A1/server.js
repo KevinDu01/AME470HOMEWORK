@@ -27,7 +27,14 @@ app.get("/sub", function (req, res) {
 app.get("/mult", function (req, res) {
   var a = parseFloat(req.query.a);
   var b = parseFloat(req.query.b);
-  var result = a - b;
+  var result = a * b;
+  res.send(result.toString());
+});
+
+app.get("/div", function (req, res) {
+  var a = parseFloat(req.query.a);
+  var b = parseFloat(req.query.b);
+  var result = a / b;
   res.send(result.toString());
 });
 
